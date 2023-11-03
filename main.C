@@ -40,7 +40,7 @@ void setSemP(int pulsante){
     
    }
   else {
-    printf(" Il semaforo pedonale:⚪🔴 \n");
+    printf("Il semaforo pedonale:⚪🔴 \n");
   }
 }
   
