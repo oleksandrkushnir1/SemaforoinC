@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
+
 int pulsante = 1;
 int i;
 
-void setSemV(pulsante){
+void setSemV(int pulsante){
 
   if(pulsante == 0){
   
@@ -20,7 +21,7 @@ void setSemV(pulsante){
   
 }
 
-void setSemP(pulsante){
+void setSemP(int pulsante){
 
   if(pulsante == 0){
 
@@ -39,23 +40,21 @@ void setSemP(pulsante){
     
    }
   else {
-    printf(" Semaforo pedoni:⚪🔴 \n");
+    printf(" Il semaforo pedonale:⚪🔴 \n");
   }
 }
   
   
 
-main (){
+int main (){
   
   for(;;){
     setSemP(pulsante);
     setSemV(pulsante);
     printf ("Il pulsante è stato premuto? (true = 0): ");
     scanf ("%d", &pulsante);
-    system("clear");
     setSemV(pulsante);
     setSemP(pulsante);
-    system("clear");
     pulsante = 1;
   }
 
