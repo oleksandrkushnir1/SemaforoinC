@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-
+#include <stdlib.h>
 
 int pulsante = 1;
 int i;
@@ -49,10 +49,12 @@ void setSemP(int pulsante){
 int main (){
   
   for(;;){
+    system("clear");
     setSemP(pulsante);
     setSemV(pulsante);
     printf ("Il pulsante è stato premuto? (true = 0): ");
     scanf ("%d", &pulsante);
+    system("clear");
     setSemV(pulsante);
     setSemP(pulsante);
     pulsante = 1;
